@@ -5,6 +5,6 @@ import { Navbar, Sidebar, Footer } from "./components";
 function App() {
   return <h4>comfy sloth starter</h4>;
 }
-console.log(1);
+// console.log(1);
 
 export default App;
