@@ -6,8 +6,8 @@ const Footer = () => {
       <h5>
         &copy;{new Date().getFullYear()}
         {/* <strong>comfy-sloth-starter</strong> */}
-        <h5>All the rights are reserved</h5>
       </h5>
+      <h5>All the rights are reserved</h5>
     </Wrapper>
   );
 };
