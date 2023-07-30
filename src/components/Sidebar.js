@@ -11,14 +11,13 @@ import { useUserContext } from "../context/user_context";
 const Sidebar = () => {
   const { isSidebarOpen, closeSidebar } = useProductsContext();
   console.log(isSidebarOpen);
+  console.log(closeSidebar);
   return (
     <SidebarContainer>
-      <aside
-        className={isSidebarOpen ? "sidebar show-sidebar" : "show-sidebar"}
-      >
+      <aside className={isSidebarOpen ? "sidebar show-sidebar" : "sidebar"}>
         <div className="show-sidebar">
           <img src={logo} className="logo" alt="comfy" />
-          <button className="close-btn" onClick={closeSidebar}>
+          <button className="close-btn" type="button" onClick={closeSidebar}>
             <FaTimes />
           </button>
         </div>
@@ -67,7 +66,7 @@ const SidebarContainer = styled.div`
     color: var(--clr-red-light);
   }
   .logo {
-    justify-self: center;
+    justify-self: left;
     height: 45px;
   }
   .links {
@@ -92,6 +91,8 @@ const SidebarContainer = styled.div`
   }
 
   .sidebar {
+    // display: flex;
+    // justify-content: space-between;
     position: fixed;
     top: 0;
     left: 0;
@@ -104,7 +105,7 @@ const SidebarContainer = styled.div`
   }
   .show-sidebar {
     transform: translate(0);
-    z-index: 999;
+    z-index: 1;
   }
   .cart-btn-wrapper {
     margin: 2rem auto;

@@ -6,7 +6,7 @@ import aboutImg from "../assets/hero-bcg.jpeg";
 const AboutPage = () => {
   return (
     <main>
-      <PageHero />
+      <PageHero title="about" />
       <Wrapper>
         <img src={aboutImg} alt="nice pic"></img>
         <article>

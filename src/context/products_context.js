@@ -27,6 +27,7 @@ export const ProductsProvider = ({ children }) => {
   const closeSidebar = () => {
     dispatch({ type: SIDEBAR_CLOSE });
   };
+  // console.log(SIDEBAR_CLOSE);
   // useEffect(() => {}, []);
   return (
     <ProductsContext.Provider value={{ ...state, openSidebar, closeSidebar }}>
