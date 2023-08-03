@@ -47,7 +47,7 @@ export const ProductsProvider = ({ children }) => {
       dispatch({ type: GET_PRODUCTS_ERROR });
     }
   };
-  const Fetchsingleproduct = async (url) => {
+  const fetchSingleProduct = async (url) => {
     dispatch({ type: GET_SINGLE_PRODUCT_BEGIN });
     try {
       const response = await axios.get(url);
@@ -63,9 +63,10 @@ export const ProductsProvider = ({ children }) => {
   useEffect(() => {
     Fetchproduct(url);
   }, []);
+
   return (
     <ProductsContext.Provider
-      value={{ ...state, openSidebar, closeSidebar, Fetchsingleproduct }}
+      value={{ ...state, openSidebar, closeSidebar, fetchSingleProduct }}
     >
       {children}
     </ProductsContext.Provider>
