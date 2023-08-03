@@ -5,7 +5,7 @@ import Error from "./ErrorPage.js";
 import Home from "./HomePage.js";
 import Privateroute from "./PrivateRoute.js";
 import Products from "./ProductsPage.js";
-import Singleproduct from "./SingleProductPage.js";
+import SingleProduct from "./SingleProductPage.js";
 
 export {
   About,
@@ -15,5 +15,5 @@ export {
   Home,
   Privateroute,
   Products,
-  Singleproduct,
+  SingleProduct,
 };

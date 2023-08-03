@@ -10,7 +10,7 @@ import {
   Home,
   Privateroute,
   Products,
-  Singleproduct,
+  SingleProduct,
 } from "./pages";
 
 function App() {
@@ -35,13 +35,15 @@ function App() {
         <Route exact path="/privateroute">
           <Privateroute />
         </Route>
+        <Route exact path="/products/:id">
+          <SingleProduct />
+        </Route>
         <Route exact path="/products">
           <Products />
         </Route>
         <Route exact path="/*">
           <Error />
         </Route>
-        <Route exact path="/products/:id" children={<Singleproduct />} />
       </Switch>
 
       <Footer />
