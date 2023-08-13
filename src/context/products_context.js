@@ -52,6 +52,7 @@ export const ProductsProvider = ({ children }) => {
     try {
       const response = await axios.get(url);
       const singlepro = response.data;
+
       dispatch({ type: GET_SINGLE_PRODUCT_SUCCESS, payload: singlepro });
     } catch {
       dispatch({

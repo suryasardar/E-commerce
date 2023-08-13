@@ -24,6 +24,7 @@ const SingleProductPage = () => {
     fetchSingleProduct,
   } = useProductsContext();
 
+  // console.log(SP, "main");
   useEffect(() => {
     fetchSingleProduct(`${url}${id}`);
   }, [id]);
@@ -64,11 +65,11 @@ const SingleProductPage = () => {
           {" "}
           back to products
         </Link>
-        <div className="products-center">
+        <div className="product-center">
           <ProductImages images={images} />
           <section className="content">
             <h2>{name}</h2>
-            <Stars />
+            <Stars stars={stars} reviews={reviews} />
             <h5 className="price"> {formatPrice(price)}</h5>
             <p className="desc"> {description}</p>
             <p className="info">
@@ -84,7 +85,7 @@ const SingleProductPage = () => {
               {company}
             </p>
             <hr />
-            {stock > 0 && <AddToCart />}
+            {stock > 0 && <AddToCart product={SP} />}
           </section>
         </div>
       </div>
@@ -95,7 +96,7 @@ const SingleProductPage = () => {
 const Wrapper = styled.main`
   .product-center {
     display: grid;
-    gap: 4rem;
+    gap: 6rem;
     margin-top: 2rem;
   }
   .price {

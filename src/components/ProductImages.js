@@ -4,7 +4,6 @@ import styled from "styled-components";
 const ProductImages = ({ images = [{ url: " " }] }) => {
   console.log(images);
   const [main, setmain] = useState(images[0]);
-  console.log(main, "maikn");
 
   return (
     <Wrapper>
@@ -16,6 +15,7 @@ const ProductImages = ({ images = [{ url: " " }] }) => {
               src={image.url}
               key={index}
               onClick={() => setmain(images[index])}
+              className={`${image.url === main.url ? "active" : "null"}`}
             />
           );
         })}
