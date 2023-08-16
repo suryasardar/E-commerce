@@ -9,7 +9,7 @@ import { useUserContext } from "../context/user_context";
 const CartButtons = () => {
   const { closeSidebar } = useProductsContext();
   const { loginWithRedirect, logout, myUser } = useUserContext();
-  console.log(loginWithRedirect, "main");
+  // console.log(loginWithRedirect, "main");
   return (
     <Wrapper className="cart-btn-wrapper">
       <Link to="/carts" className="cart-btn" onClick={closeSidebar}>

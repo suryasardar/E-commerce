@@ -22,7 +22,9 @@ root.render(
     <UserProvider>
       <ProductsProvider>
         <FilterProvider>
-          <App />
+          <CartProvider>
+            <App />
+          </CartProvider>
         </FilterProvider>
       </ProductsProvider>
     </UserProvider>

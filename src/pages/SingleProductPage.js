@@ -45,7 +45,7 @@ const SingleProductPage = () => {
     return <Loading />;
   }
   // console.log(error);
-  console.log(SP);
+
   const {
     name,
     price,

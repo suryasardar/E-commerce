@@ -16,7 +16,7 @@ const initialState = {
   isSidebarOpen: false,
   products_loading: false,
   products_error: false,
-  products: [],
+  products_all: [],
   featured_products: [],
   singleproduct_loading: false,
   singleproduct_error: false,
@@ -67,7 +67,13 @@ export const ProductsProvider = ({ children }) => {
 
   return (
     <ProductsContext.Provider
-      value={{ ...state, openSidebar, closeSidebar, fetchSingleProduct }}
+      value={{
+        ...state,
+        openSidebar,
+        closeSidebar,
+
+        fetchSingleProduct,
+      }}
     >
       {children}
     </ProductsContext.Provider>
